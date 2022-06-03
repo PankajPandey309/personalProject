@@ -1,0 +1,17 @@
+
+
+ h2 {
+    text-align: justify;
+    font-size: 27px;
+    font-family: helvetica, arial, sans-serif, cursive;
+    font-style: italic;
+    padding: 50px;
+}
+
+p {
+    text-align: justify;
+        font-size: 17px;
+        font-family: helvetica, arial, sans-serif, cursive;
+        font-style: italic;
+        padding: 20px;
+}

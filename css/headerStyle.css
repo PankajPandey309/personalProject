@@ -1,0 +1,293 @@
+
+ header {
+  position: relative;
+  height: 500px;
+  z-index: 100px;
+  background-image: url("https://m.media-amazon.com/images/I/61yIl36xNQL._AC_SL1200_.jpg" );
+  
+
+}
+
+
+h1 {
+  padding: 20px 0;
+  font: 44px "Arial";
+  text-align: left;
+}
+
+header h1 {
+  color: white;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
+  /* set height to pixels if you want angle to change with screen width */
+}
+
+.profile {
+    position: absolute;
+    z-index: 10 px;
+    opacity: 100%;
+    border-radius: 50%;
+    float: right;
+    margin-left: 100px;
+    right: 130px;
+    bottom: 50px;
+    width: 280px;
+    height: 280px;
+    border: 4px solid black;
+    box-shadow: 5px 10px 10px #888888;
+}
+
+
+@media screen and (max-width: 800px) {
+.menu-content {
+    z-index: 10 px;
+    max-height: 0;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif; 
+    padding: 0 0 0 50px;
+}  
+}
+
+input:checked ~ .menu-content {
+    max-height: 100%;
+
+}
+
+
+
+@media screen and (min-width: 800px) {
+.collapsible-menu {
+    opacity: 100%;
+    background-image: linear-gradient(black, transparent);
+    padding: 0px 30px;
+    border-bottom: 3px solid  black;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+    transition: all 5s ease-in-out;
+    
+    
+}
+
+.collapsible-menu label {
+    opacity: 0%;
+}
+
+
+.collapsible-menu .menu-content {
+    font-family: 'helvetica';
+    padding: 0 0 0 0px;
+    opacity: 100%;
+    display: inline;
+    text-align: left;
+    font-weight: normal;
+    font-size: large;
+    
+}
+
+.collapsible-menu .menu-content li:hover:after {
+    opacity: 1;
+    top: -80%;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.8s, 0.9s, 0.2s;
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+.collapsible-menu .menu-content li:active::after {
+    opacity: 0;
+  }
+
+.collapsible-menu .menu-content li::after {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+    );
+  }
+
+
+.collapsible-menu .menu-content li{
+    font-family: 'helvetica'; 
+    
+    opacity: 100%;
+    display: inline;
+    justify-content: center;
+    text-align: left;
+    font-weight: normal;
+    
+    border-radius: 5px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    margin:10px
+}
+
+.collapsible-menu .menu-content a{
+    font-family: 'helvetica';
+    padding: 0 0 0 10px;
+    opacity: 100%;
+    display: inline;
+    justify-content: center;
+    text-align: left;
+    font-weight: normal;
+}
+
+.collapsible-menu .menu-content ul{
+    font-family: 'helvetica';
+    padding: 0 0 0 20px;
+    opacity: 100%;
+    display: inline;
+    justify-content: center;
+    text-align: left;
+    font-weight: normal;
+}
+
+
+}
+
+
+.collapsible-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.collapsible-menu a {
+    display:block;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif; 
+    opacity: 100%;
+    color: black;
+    font-weight: bold;
+}
+
+
+.collapsible-menu label {
+    cursor: pointer;
+}
+
+
+input#menu {
+    display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+    .collapsible-menu {
+        display: block;
+    opacity: 100%;
+    background-image: linear-gradient(black, transparent);
+    padding: 0px 30px;
+    border-bottom: 3px solid  black;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+    transition: all 3s ease-in-out;
+    text-align: left;
+    
+    }
+
+    .collapsible-menu .menu-content li:hover:after {
+        opacity: 1;
+        top: -80%;
+        left: 130%;
+        transition-property: left, top, opacity;
+        transition-duration: 0.7s, 0.7s, 0.15s;
+        transition-timing-function: ease;
+        cursor: pointer;
+    }
+    
+    .collapsible-menu .menu-content li:active:after {
+        opacity: 0;
+      }
+    
+    .collapsible-menu .menu-content li:after {
+        content: "";
+        position: absolute;
+        top: -110%;
+        left: -210%;
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+        transform: rotate(30deg);
+        
+        background: rgba(255, 255, 255, 0.13);
+        background: linear-gradient(
+          to right, 
+          rgba(255, 255, 255, 0.13) 0%,
+          rgba(255, 255, 255, 0.13) 77%,
+          rgba(255, 255, 255, 0.5) 92%,
+          rgba(255, 255, 255, 0.0) 100%
+        );
+      }
+    
+    
+    .collapsible-menu .menu-content li{
+        font-family: 'helvetica'; 
+        
+        opacity: 100%;
+        display: inline;
+        justify-content: center;
+        text-align: left;
+        font-weight: normal;
+        
+        border-radius: 5px;
+        padding-right: 15px;
+        margin-bottom: 10px;
+        margin:10px
+    }
+    
+}
+
+ p{
+        text-align: justify;
+            font-size: 17px;
+            color: #000000;
+            font-family: 'Carme', sans-serif , cursive;
+            line-height: 24px;
+            margin: 0 0 24px;
+            z-index: 0;
+            padding: 10px; 
+            padding-right: 20px;
+            font-style: italic;
+    
+}
+h1 { color: #6fcff5; 
+    font-family: 'Rouge Script', cursive; 
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 48px; 
+    margin: 30px 0 50px;
+    text-align: left;
+    text-shadow: 1px 1px 2px #082b34; 
+    z-index: 0;
+    padding: 10px;
+}
+
+a {
+    color: #646b6b;
+    
+}
+
+.page-container{
+    z-index: 0;
+}
+
+.page-container .content-wrap {
+    z-index: 0;
+}

@@ -1,0 +1,60 @@
+
+
+#div1 {
+    position: relative;
+    padding: 2%;
+    margin-top: -180px;
+    z-index: 100 ;
+    opacity: 10%;
+    background-image: linear-gradient(to right, #fafbfc, #f69505);
+    border-radius: 26px;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    animation: mymove 5s infinite;
+    animation-timing-function: linear;
+}
+#div2 {
+    z-index: 10 ;
+    position: relative;
+    opacity: 10%;
+    margin-top: -10px;
+    background-image: linear-gradient(to right, #fafbfc, #f83a05);
+    border-radius: 26px;
+    width: 250px;
+    height: 50px;
+    position: relative;
+    animation: mymove 5s infinite;
+    animation-timing-function: ease;}
+#div3 {z-index: 10 ;
+    opacity: 10%;
+    background-image: linear-gradient(to right, #fafbfc, #4a0eec);
+    border-radius: 26px;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    animation: mymove 5s infinite;
+    animation-timing-function: ease-in;}
+#div4 {z-index: 10 ;
+    opacity: 10%;
+    background-image: linear-gradient(to right, #fafbfc, #0aeefa);
+    border-radius: 26px;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    animation: mymove 5s infinite;
+    animation-timing-function: ease-out;}
+#div5 {z-index: 10 ;
+    opacity: 10%;
+    background-image: linear-gradient(to right, #fafbfc, #f8dcbb);
+    border-radius: 26px;
+    width: 250px;
+    height: 50px;
+    position: relative;
+    animation: mymove 5s infinite;
+    animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+    from {left: 100%;}
+    to {left: -200px;}
+  }
