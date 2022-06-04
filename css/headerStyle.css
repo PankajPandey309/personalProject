@@ -1,8 +1,9 @@
 
  header {
   position: relative;
+  top: 0;
   height: 500px;
-  z-index: 100px;
+  width: 100%;
   background-image: url("https://m.media-amazon.com/images/I/61yIl36xNQL._AC_SL1200_.jpg" );
   
 
@@ -27,24 +28,29 @@ svg {
   /* set height to pixels if you want angle to change with screen width */
 }
 
+@media screen and (max-width: 800px) {
 .profile {
+    opacity: 100;
     position: absolute;
+    right: 10px;
     z-index: 10 px;
-    opacity: 100%;
     border-radius: 50%;
     float: right;
     margin-left: 100px;
     right: 130px;
     bottom: 50px;
-    width: 280px;
-    height: 280px;
+    width: 180px;
+    height: 180px;
     border: 4px solid black;
     box-shadow: 5px 10px 10px #888888;
+    transition: width 2s, height 2s;
+}
 }
 
 
 @media screen and (max-width: 800px) {
 .menu-content {
+    color: black;
     z-index: 10 px;
     max-height: 0;
     overflow: hidden;
@@ -58,12 +64,33 @@ input:checked ~ .menu-content {
 
 }
 
-
+/*full screen*/
+@media screen and (min-width: 800px) {
+    .profile {
+        opacity: 100;
+        position: absolute;
+        z-index: 10 px;
+        
+        border-radius: 50%;
+        float: right;
+        margin-left: 100px;
+        right: 130px;
+        bottom: 50px;
+        width: 280px;
+        height: 280px;
+        border: 4px solid black;
+        box-shadow: 5px 10px 10px #888888;
+        transition: width 2s, height 2s;
+    }
+}
 
 @media screen and (min-width: 800px) {
 .collapsible-menu {
-    opacity: 100%;
-    background-image: linear-gradient(black, transparent);
+    position: fixed;
+    width: 100%;
+    opacity: 90%;
+    background-color:black;
+
     padding: 0px 30px;
     border-bottom: 3px solid  black;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
@@ -84,6 +111,7 @@ input:checked ~ .menu-content {
     display: inline;
     text-align: left;
     font-weight: normal;
+    color: white;
     font-size: large;
     
 }
@@ -140,6 +168,7 @@ input:checked ~ .menu-content {
 
 .collapsible-menu .menu-content a{
     font-family: 'helvetica';
+    color: white;
     padding: 0 0 0 10px;
     opacity: 100%;
     display: inline;
@@ -191,9 +220,11 @@ input#menu {
 
 @media screen and (max-width: 800px) {
     .collapsible-menu {
+        position: fixed;
+    width: 100%;
         display: block;
     opacity: 100%;
-    background-image: linear-gradient(black, transparent);
+    background-color: white;
     padding: 0px 30px;
     border-bottom: 3px solid  black;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
@@ -284,8 +315,9 @@ a {
     
 }
 
-.page-container{
+.page-container {
     z-index: 0;
+    margin-bottom: 180px;
 }
 
 .page-container .content-wrap {
